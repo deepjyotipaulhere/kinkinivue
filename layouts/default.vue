@@ -1,19 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-navigation-drawer v-model="sidebar" app>
-        <v-list>
-          <v-list-tile to="/">
-            <v-list-tile-action>
-            </v-list-tile-action>
-            <v-list-tile-content>dd</v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
       <v-toolbar prominent>
-        <span class="hidden-sm-and-up">
-          <v-toolbar-side-icon @click="sidebar = !sidebar"></v-toolbar-side-icon>
-        </span>
         <v-toolbar-title>
           <router-link to="/" style="cursor: pointer">
             <v-img src="/kinkiniroylogo.png" width="190px"></v-img>
@@ -24,7 +12,27 @@
           <v-btn text to="/quillings">Quillings</v-btn>
           <v-btn text to="/earrings">Earrings</v-btn>
           <v-btn text to="/embroideries">Embroideries</v-btn>
+          <v-btn text to="/contact">Contact</v-btn>
         </v-toolbar-items>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn class="hidden-sm-and-up" text icon v-bind="attrs" v-on="on"><v-icon>mdi-dots-vertical</v-icon></v-btn>
+          </template>
+          <v-list>
+            <v-list-item to="/quillings">
+              <v-list-item-title>Quillings</v-list-item-title>
+            </v-list-item>
+            <v-list-item to="/earrings">
+              <v-list-item-title>Earrings</v-list-item-title>
+            </v-list-item>
+            <v-list-item to="/embroideries">
+              <v-list-item-title>Embroideries</v-list-item-title>
+            </v-list-item>
+            <v-list-item to="/contact">
+              <v-list-item-title>Contact</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-toolbar>
       <v-container>
         <nuxt />

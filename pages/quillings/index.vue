@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col v-for="(x,i) in images" :key="i" class="d-flex child-flex" cols="2">
+    <v-col v-for="(x,i) in images" :key="i" class="d-flex child-flex" cols="12" md="3" sm="6">
       <v-card tile class="d-flex" :to="'/quillings/'+x.id">
         <v-img
           :src="'http://www.kinkiniroy.com:1337'+x.images[0].formats.medium.url"

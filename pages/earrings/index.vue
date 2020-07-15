@@ -1,6 +1,6 @@
 <template>
-  <v-row v-if="loaded">
-    <v-col v-for="(x,i) in images" :key="i" class="d-flex child-flex" cols="2">
+  <v-row>
+    <v-col v-for="(x,i) in images" :key="i" class="d-flex child-flex" cols="12" md="3" sm="6">
       <v-card tile class="d-flex" :to="'/earrings/'+x.id">
         <v-img
           :src="'http://www.kinkiniroy.com:1337'+x.images[0].formats.medium.url"
@@ -23,14 +23,12 @@
 export default {
   data() {
     return {
-      images: [],
-      loaded: false
+      images: []
     };
   },
   created() {
     this.$axios.get("/earrings").then(response => {
       this.images = response.data;
-      this.loaded = true;
     });
   }
 };

@@ -2,7 +2,7 @@
   <v-app>
     <v-container>
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" sm="12" md="6">
           <v-carousel :cycle="true" height="1000px">
             <v-carousel-item
               v-for="(x,i) in item.images"
@@ -13,7 +13,7 @@
             ></v-carousel-item>
           </v-carousel>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="12" sm="12" md="6">
           <h1>{{item.title}}</h1>
           <v-subheader>{{item.description}}</v-subheader>
           <br />
