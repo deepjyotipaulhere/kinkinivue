@@ -18,7 +18,7 @@
       </v-list-item>
 
       <v-card-actions class="white justify-center">
-        <v-btn color="grey" class="white--text" fab icon small to="mailto:kinkiniroy2012@gmail.com">
+        <v-btn color="grey" class="white--text" fab icon small href="mailto:kinkiniroy2012@gmail.com">
           <v-icon color="#D44638">mdi-gmail</v-icon>
         </v-btn>
         <v-btn
@@ -27,7 +27,7 @@
           fab
           icon
           small
-          to="https://www.instagram.com/kaepapercraft/"
+          href="https://www.instagram.com/kaepapercraft/"
           target="_blank"
         >
           <v-icon color="#c13584">mdi-instagram</v-icon>
