@@ -21,6 +21,18 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Quillings - Kinkini Roy - Art Emporium and Gallery",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Quillings - Kinkini Roy - Art Emporium and Gallery"
+        }
+      ]
+    };
+  },
   data() {
     return {
       images: []

@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-row>
-      <v-col cols="12" md="5">
+    <v-row align="center" justify="center">
+      <v-col cols="12" md="6">
         <v-img src="/kinkiniroylogo.png" width="500"></v-img>
         <br />
         <p>I am a self-taught artist, starting with water and oil, slowly treading into paper as an art form. When I was painting on paper, to now when I am painting with paper, the journey has been incredible and magnificent. Using paper to draw with, to bring out forms and shapes, becomes quite an interesting path for each of my pieces. Paper is such a good medium to experiment with to create art. I am a paper painter using paper to craft out different art forms which can be collected and admired, along with wearables.</p>
@@ -12,8 +12,8 @@
         <v-btn to="/earrings" text color="success">Expore Earrings</v-btn>
         <v-btn to="/embroideries" text color="warning">Expore Embroideries</v-btn>
       </v-col>
-      <v-col cols="12" md="7" sm="1">
-        <v-img src="/front.png" class="hidden-xs-only" />
+      <v-col cols="12" md="6" sm="1">
+        <v-img src="/front2.jpg" style="box-shadow:0 3px 5px grey" />
       </v-col>
     </v-row>
   </v-app>

@@ -17,12 +17,12 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    titleTemplate: 'Kinkini Roy - Art Emporium and Gallery',
-    title: process.env.npm_package_name || '',
+    // titleTemplate: 'Kinkini Roy - Art Emporium and Gallery',
+    // title: 'Kinkini Roy - Art Emporium and Gallery',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      // { hid: 'description', name: 'description', content: 'Kinkini Roy - Art Emporium and Gallery' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/kinkiniroylogo.png' }
@@ -56,7 +56,19 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-seo'
   ],
+  seo: {
+    // Module options
+    name: 'Kinkini Roy - Art Emporium and Gallery',
+    title: 'Kinkini Roy - Art Emporium and Gallery',
+    templateTitle: 'Kinkini Roy - Art Emporium and Gallery',
+    description: 'Kinkini Roy - Art Emporium and Gallery',
+    keywords: ['kinkini roy', 'art gallery', 'art emporium'],
+    image: '/kinkiniroylogo.png',
+    openGraph: { type: 'website', title: 'Kinkini Roy - Art Emporium and Gallery', description: 'Kinkini Roy - Art Emporium and Gallery' }
+    //...
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

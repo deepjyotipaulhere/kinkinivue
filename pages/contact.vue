@@ -6,7 +6,7 @@
         height="400px"
         src="http://kinkiniroy.com:1337/uploads/IMG_9033_min_3_5e03c0b3ec.jpeg"
       >
-        <v-card-title>Contact</v-card-title>
+        <!-- <v-card-title>Contact</v-card-title> -->
       </v-img>
       <v-list-item three-line>
         <v-list-item-content>
@@ -18,7 +18,14 @@
       </v-list-item>
 
       <v-card-actions class="white justify-center">
-        <v-btn color="grey" class="white--text" fab icon small href="mailto:kinkiniroy2012@gmail.com">
+        <v-btn
+          color="grey"
+          class="white--text"
+          fab
+          icon
+          small
+          href="mailto:kinkiniroy2012@gmail.com"
+        >
           <v-icon color="#D44638">mdi-gmail</v-icon>
         </v-btn>
         <v-btn
@@ -38,7 +45,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Contact - Kinkini Roy - Art Emporium and Gallery",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Contact - Kinkini Roy - Art Emporium and Gallery"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>

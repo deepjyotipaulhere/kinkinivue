@@ -3,11 +3,11 @@
     <v-container>
       <v-row>
         <v-col cols="12" sm="12" md="6">
-          <v-carousel :cycle="true">
+          <v-carousel :cycle="true" height="auto" hide-delimiter-background>
             <v-carousel-item
               v-for="(x,i) in item.images"
               :key="i"
-              :src="'http://www.kinkiniroy.com:1337'+x.formats.large.url"
+              :src="'http://www.kinkiniroy.com:1337'+x.url"
               reverse-transition="fade-transition"
               transition="fade-transition"
             ></v-carousel-item>
@@ -20,7 +20,9 @@
           <v-list-item two-line>
             <v-list-item-content>
               <v-list-item-title style="font-size:larger">Price</v-list-item-title>
-              <v-list-item-subtitle style="font-weight: bolder;font-size:xx-large">&#8377; {{item.price}}</v-list-item-subtitle>
+              <v-list-item-subtitle
+                style="font-weight: bolder;font-size:xx-large"
+              >&#8377; {{item.price}}</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
           <v-list-item two-line>
@@ -43,17 +45,27 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.item.title + " - Kinkini Roy - Art Emporium and Gallery",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.item.title + " - Kinkini Roy - Art Emporium and Gallery"
+        }
+      ]
+    };
+  },
   data() {
     return {
       item: {}
     };
   },
   created() {
-    this.$axios
-      .get("/embroideries/" + this.$route.params.id)
-      .then(response => {
-        this.item = response.data;
-      });
+    this.$axios.get("/embroideries/" + this.$route.params.id).then(response => {
+      this.item = response.data;
+    });
   }
 };
 </script>
