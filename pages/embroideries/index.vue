@@ -3,8 +3,8 @@
     <v-col v-for="(x,i) in images" :key="i" class="d-flex child-flex" cols="12" md="3" sm="6">
       <v-card tile class="d-flex" :to="'/embroideries/'+x.id">
         <v-img
-          :src="'http://www.kinkiniroy.com:1337'+x.images[0].formats.medium.url"
-          :lazy-src="'http://www.kinkiniroy.com:1337'+x.images[0].formats.thumbnail.url"
+          :src="$axios.defaults.baseURL+x.images[0].formats.medium.url"
+          :lazy-src="$axios.defaults.baseURL+x.images[0].formats.thumbnail.url"
           aspect-ratio="1"
           class="grey lighten-2"
         >

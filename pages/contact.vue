@@ -4,7 +4,7 @@
       <v-img
         class="white--text align-end"
         height="400px"
-        src="http://kinkiniroy.com:1337/uploads/IMG_9033_min_3_5e03c0b3ec.jpeg"
+        :src="$axios.defaults.baseURL+'/uploads/IMG_9033_min_3_5e03c0b3ec.jpeg'"
       >
         <!-- <v-card-title>Contact</v-card-title> -->
       </v-img>

@@ -74,7 +74,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://kinkiniroy.com:1337'
+    baseURL: 'https://kinkiniroy.com/api'
   },
   /*
   ** vuetify module configuration

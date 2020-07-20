@@ -7,7 +7,7 @@
             <v-carousel-item
               v-for="(x,i) in item.images"
               :key="i"
-              :src="'http://www.kinkiniroy.com:1337'+x.url"
+              :src="$axios.defaults.baseURL+x.url"
               reverse-transition="fade-transition"
               transition="fade-transition"
             ></v-carousel-item>
