@@ -20,7 +20,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Kinkini Roy - Art Emporium and Gallery",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Kinkini Roy - Art Emporium and Gallery"
+        }
+      ]
+    };
+  },
+};
 </script>
 
 <style>
